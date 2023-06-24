@@ -1,4 +1,4 @@
-package org.sort;
+package sort;
 
 public class SelectionSort {
     public int[] selectionSort(int[] arrInt) {

@@ -1,11 +1,10 @@
-package org.sort;
+package sort;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import sort.SelectionSort;
 
 import java.util.Arrays;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SelectionSortTest {
     @Test
