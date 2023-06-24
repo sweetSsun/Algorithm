@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="2c421eb7-d4ff-40bf-a9a2-94698c95847a" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
@@ -21,6 +22,9 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/sort/SelectionSort.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/sort/SelectionSortTest.java" afterDir="false" />
     </list>
+=======
+    <list default="true" id="2c421eb7-d4ff-40bf-a9a2-94698c95847a" name="Changes" comment="" />
+>>>>>>> 889844f (sort 선택정렬)
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,9 +38,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+=======
+>>>>>>> 889844f (sort 선택정렬)
   <component name="ProjectId" id="2RdoQ7KIcsl5WPT9SH7QRdLOfjS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -47,13 +54,18 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+<<<<<<< HEAD
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/Users/jisun/Workspace/Algorithm",
+=======
+    "WebServerToolWindowFactoryState": "false",
+>>>>>>> 889844f (sort 선택정렬)
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+<<<<<<< HEAD
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -62,6 +74,8 @@
       <recent name="" />
     </key>
   </component>
+=======
+>>>>>>> 889844f (sort 선택정렬)
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -70,6 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687589299938</updated>
+<<<<<<< HEAD
       <workItem from="1687589301082" duration="262000" />
     </task>
     <servers />
@@ -77,4 +92,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+=======
+      <workItem from="1687589301082" duration="2000" />
+    </task>
+    <servers />
+  </component>
+>>>>>>> 889844f (sort 선택정렬)
 </project>
