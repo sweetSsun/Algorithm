@@ -6,14 +6,13 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 
 class SortTest {
+    int[] arrInt = {1, 10, 8, 5, 2, 6, 9, 7, 4, 3};
+    int[] expectedArr = Arrays.stream(arrInt).sorted().toArray();
+
     @Test
     public void selectionSort() {
-        int[] arrInt = {1, 10, 8, 5, 2, 6, 9, 7, 4, 3};
-
         SelectionSort ss = new SelectionSort();
         int[] actualArr = ss.selectionSort(arrInt);
-
-        int[] expectedArr = Arrays.stream(arrInt).sorted().toArray();
 
         Assertions.assertArrayEquals(expectedArr, actualArr);
     }
@@ -21,12 +20,16 @@ class SortTest {
 
     @Test
     public void bubbleSort() {
-        int[] arrInt = {1, 10, 8, 5, 2, 6, 9, 7, 4, 3};
-
         BubbleSort bs = new BubbleSort();
         int[] actualArr = bs.bubbleSort(arrInt);
 
-        int[] expectedArr = Arrays.stream(arrInt).sorted().toArray();
+        Assertions.assertArrayEquals(expectedArr, actualArr);
+    }
+
+    @Test
+    public void insertionSort() {
+        InsertionSort is = new InsertionSort();
+        int[] actualArr = is.insertionSort(arrInt);
 
         Assertions.assertArrayEquals(expectedArr, actualArr);
     }
