@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 class SortTest {
     int[] arrInt = {1, 10, 8, 5, 2, 6, 9, 7, 4, 3};
@@ -41,4 +44,17 @@ class SortTest {
 
         Assertions.assertArrayEquals(expectedArr, actualArr);
     }
+
+    @Test
+    public void revertQuickSort() {
+        Integer[] expectedReverseArr = Arrays.stream(arrInt).boxed().toArray(Integer[]::new);
+        Arrays.sort(expectedReverseArr, Comparator.reverseOrder());
+
+        QuickSort qs = new QuickSort();
+        int[] actualArr = qs.reverseQuickSort(arrInt);
+
+        Assertions.assertArrayEquals(expectedReverseArr, Arrays.stream(actualArr).boxed().toArray(Integer[]::new));
+    }
+
+
 }

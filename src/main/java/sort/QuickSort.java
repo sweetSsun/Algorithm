@@ -14,30 +14,68 @@ public class QuickSort {
         if(start >= end) return;
 
         int key = start;
-        int i = start+1;
-        int j = end;
+        int left = start+1;
+        int right = end;
         int temp;
 
-        while(i <= j) {
-            while(i <= end && arrInt[i] <= arrInt[key]) {
-                i++;
+        while(left <= right) {
+            while(left <= end && arrInt[left] <= arrInt[key]) {
+                left++;
             }
-            while(j > start && arrInt[j] >= arrInt[key]) {
-                j--;
+            while(right > start && arrInt[right] >= arrInt[key]) {
+                right--;
             }
 
-            if(i > j) {
-                temp = arrInt[j];
-                arrInt[j] = arrInt[key];
+            if(left > right) {
+                temp = arrInt[right];
+                arrInt[right] = arrInt[key];
                 arrInt[key] = temp;
             } else {
-                temp = arrInt[j];
-                arrInt[j] = arrInt[i];
-                arrInt[i] = temp;
+                temp = arrInt[right];
+                arrInt[right] = arrInt[left];
+                arrInt[left] = temp;
             }
         }
 
-        recursion(start, j-1);
-        recursion(i, end);
+        recursion(start, right-1);
+        recursion(left, end);
+    }
+
+    public int[] reverseQuickSort(int[] arrInt) {
+        this.arrInt = arrInt;
+        reverseRecursion(0, arrInt.length-1);
+
+        return this.arrInt;
+    }
+
+    private void reverseRecursion(int start, int end) {
+        if(start >= end) return;
+
+        int key = start;
+        int left = start+1;
+        int right = end;
+        int temp;
+
+        while(left <= right) {
+            while(left <= end && arrInt[left] >= arrInt[key]) {
+                left++;
+            }
+            while(right > start && arrInt[right] <= arrInt[key]) {
+                right--;
+            }
+
+            if(left > right) {
+                temp = arrInt[right];
+                arrInt[right] = arrInt[key];
+                arrInt[key] = temp;
+            } else {
+                temp = arrInt[right];
+                arrInt[right] = arrInt[left];
+                arrInt[left] = temp;
+            }
+        }
+
+        reverseRecursion(start, right-1);
+        reverseRecursion(left, end);
     }
 }
