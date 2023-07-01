@@ -33,4 +33,12 @@ class SortTest {
 
         Assertions.assertArrayEquals(expectedArr, actualArr);
     }
+
+    @Test
+    public void quickSort() {
+        QuickSort qs = new QuickSort();
+        int[] actualArr = qs.quickSort(arrInt);
+
+        Assertions.assertArrayEquals(expectedArr, actualArr);
+    }
 }
