@@ -56,5 +56,12 @@ class SortTest {
         Assertions.assertArrayEquals(expectedReverseArr, Arrays.stream(actualArr).boxed().toArray(Integer[]::new));
     }
 
+    @Test
+    public void mergeSort() {
+        MergeSort ms = new MergeSort();
+        int[] actualArr = ms.mergeSort(arrInt);
+
+        Assertions.assertArrayEquals(expectedArr, actualArr);
+    }
 
 }
