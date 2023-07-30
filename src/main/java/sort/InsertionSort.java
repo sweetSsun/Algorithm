@@ -7,7 +7,7 @@ public class InsertionSort {
 
         for (i = 0; i < length-1; i++) {
             j = i;
-            while (arrInt[j] > arrInt[j+1]) {
+            while (j >= 0 && arrInt[j] > arrInt[j+1]) {
                 temp = arrInt[j+1];
                 arrInt[j+1] = arrInt[j];
                 arrInt[j] = temp;

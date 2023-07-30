@@ -1,6 +1,7 @@
 package sort;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -9,8 +10,22 @@ import java.util.Comparator;
 import java.util.List;
 
 class SortTest {
-    int[] arrInt = {1, 10, 8, 5, 2, 6, 9, 7, 4, 3};
-    int[] expectedArr = Arrays.stream(arrInt).sorted().toArray();
+    int[] arrInt;
+    int[] expectedArr;
+
+    @BeforeEach
+    public void init() {
+        // 1~100 사이의 길이 생성
+        int length = (int) (Math.random() * 100) + 1;
+        arrInt = new int[length];
+
+        for(int i = 0; i < length; i++) {
+            // 1~1000 사이의 난수를 배열에 입력
+            arrInt[i] = (int) (Math.random() * 30) + 1;
+        }
+
+        expectedArr = Arrays.stream(arrInt). sorted().toArray();
+    }
 
     @Test
     public void selectionSort() {
@@ -64,4 +79,11 @@ class SortTest {
         Assertions.assertArrayEquals(expectedArr, actualArr);
     }
 
+    @Test
+    public void heapSort() {
+        HeapSort hs = new HeapSort();
+        int[] actualArr = hs.heapSort(arrInt);
+
+        Assertions.assertArrayEquals(expectedArr, actualArr);
+    }
 }
