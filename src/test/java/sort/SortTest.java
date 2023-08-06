@@ -12,6 +12,7 @@ import java.util.List;
 class SortTest {
     int[] arrInt;
     int[] expectedArr;
+    final static int MAX_NUM = 100;
 
     @BeforeEach
     public void init() {
@@ -20,8 +21,8 @@ class SortTest {
         arrInt = new int[length];
 
         for(int i = 0; i < length; i++) {
-            // 1~1000 사이의 난수를 배열에 입력
-            arrInt[i] = (int) (Math.random() * 30) + 1;
+            // 1~100 사이의 난수를 배열에 입력
+            arrInt[i] = (int) (Math.random() * MAX_NUM) + 1;
         }
 
         expectedArr = Arrays.stream(arrInt). sorted().toArray();
@@ -83,6 +84,14 @@ class SortTest {
     public void heapSort() {
         HeapSort hs = new HeapSort();
         int[] actualArr = hs.heapSort(arrInt);
+
+        Assertions.assertArrayEquals(expectedArr, actualArr);
+    }
+
+    @Test
+    public void countingSort() {
+        CountingSort cs = new CountingSort();
+        int[] actualArr = cs.countingSort(arrInt, MAX_NUM);
 
         Assertions.assertArrayEquals(expectedArr, actualArr);
     }
