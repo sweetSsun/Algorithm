@@ -1,8 +1,7 @@
-package sort;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import sort.*;
 
 import java.util.Arrays;
 import java.util.Collections;
