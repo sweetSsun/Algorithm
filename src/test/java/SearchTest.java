@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import search.BreadthFirstSearch;
+import search.DepthFirstSearch;
 
 public class SearchTest {
 
@@ -10,11 +11,21 @@ public class SearchTest {
     int[][] graph = {{}, {2,3,8}, {1,6,8}, {1,5}, {5,7}, {3,4,7}, {2}, {4,5}, {1,2}};
 
     @Test
-    public void bfsTest () {
+    public void bfsTest() {
         BreadthFirstSearch bfs = new BreadthFirstSearch();
 
         String expectedStr = "1 2 3 8 6 5 4 7 ";
         String actualStr = bfs.bfs(1, graph);
+
+        Assertions.assertEquals(expectedStr, actualStr);
+    }
+
+    @Test
+    public void dfsTest() {
+        DepthFirstSearch dfs = new DepthFirstSearch();
+
+        String expectedStr = "1 2 6 8 3 5 4 7 ";
+        String actualStr = dfs.dfs(1, graph);
 
         Assertions.assertEquals(expectedStr, actualStr);
     }
